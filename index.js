@@ -48,3 +48,7 @@ var container = document.querySelector(".testcon")
       }
     }
   });
+
+  // ScrollReveal().reveal('.headline');
+  // ScrollReveal({ reset: true, delay: 2000  });
+  new WOW().init();

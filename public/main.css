@@ -29,12 +29,15 @@ html,body{
 }
 .backhead p{
     font-size: 18vw;
+    font-weight: 700;
+
     color: black;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    opacity: 10%;
+    opacity: 10% !important;
 }
+
 .myname{
     position: absolute;
     top: 40%;
@@ -46,8 +49,15 @@ html,body{
 }
 .description{
     margin-top: 30px;
-   font-size: 0.9vw;
-   padding:0 7vw;
+    font-size: 3vw;
+    padding:0 7vw;
+    text-align: center;
+}
+.description span{
+    padding: 5px 20px;
+  background-color: black;
+  color:white;
+  text-align: center;
 }
 .container1{
     margin: 0px;
@@ -103,6 +113,7 @@ html,body{
     -webkit-text-stroke-color:white;
     -webkit-text-stroke-width: 0.5px;
     font-size:3vw;
+    font-weight: 700;
     right: -90px;
     /* animation: slide 0.9s ease-in infinite; */
 }
@@ -160,6 +171,7 @@ html,body{
 .thankyoutext{
     margin:150px 0;
     font-size: 4vw;
+    font-weight: 500;
     text-align: center;
 }
 .thankyoutext span{
@@ -183,6 +195,33 @@ html,body{
     text-align: center;
     font-size: 0.9vw;
     margin-bottom: 20px;
+}
+
+.scaleexp{
+
+    animation-name: explore;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+@keyframes explore {
+0%{
+    transform: scale(1);
+}
+50%{
+    transform: scale(1.1);
+}
+100%{
+    transform: scale(1);
+}
+}
+@keyframes explorebeg {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 /* .imageleft{
     display: flex;
