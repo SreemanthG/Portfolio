@@ -4,9 +4,11 @@ var glide = new Glide('#project', {
     perView: 2,
     focusAt: 'center',
     gap:300,
+
     breakpoints: {
-      800: {
-        perView: 2
+      1200: {
+        perView: 1,
+        
       },
       480: {
         perView: 1
@@ -51,4 +53,45 @@ var container = document.querySelector(".testcon")
 
   // ScrollReveal().reveal('.headline');
   // ScrollReveal({ reset: true, delay: 2000  });
-  new WOW().init();
+  // new WOW().init();
+  $(document).ready(function(){
+    $(".icon-line2-camera").hover(function(){
+    $(this).addClass("rotate-scale-up");
+    }, function(){
+    $(this).removeClass("rotate-scale-up");
+    });
+    $(".icon-line2-camera").click(function(){
+    $(this).closest(".flip-card").toggleClass("hovered"); 
+    });
+    });
+
+    var currentX = '';
+var currentY = '';
+var movementConstant = .015;
+$(document).mousemove(function(e) {
+  if(currentX == '') currentX = e.pageX;
+  var xdiff = e.pageX - currentX;
+  currentX = e.pageX;
+   if(currentY == '') currentY = e.pageY;
+  var ydiff = e.pageY - currentY;
+  currentY = e.pageY; 
+  $('.parallax div').each(function(i, el) {
+      var movement = (i + 1) * (xdiff * movementConstant);
+	  var movementy = (i + 1) * (ydiff * movementConstant);
+      var newX = $(el).position().left + movement;
+	  var newY = $(el).position().top + movementy;
+      $(el).css('left', newX + 'px');
+	  $(el).css('top', newY + 'px');
+  });
+});
+
+  
+if(window.location.hash) {
+
+  var offset = -100;
+
+  // smooth scroll to the anchor id
+  $('html, body').animate({
+      scrollTop: ($(window.location.hash).offset().top + offset) + 'px'
+  }, 1000, 'swing');
+}    
