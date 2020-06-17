@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   //Preloader
   preloaderFadeOutTime = 500;
@@ -155,3 +156,4 @@ if(window.location.hash) {
       scrollTop: ($(window.location.hash).offset().top + offset) + 'px'
   }, 1000, 'swing');
 }    
+
