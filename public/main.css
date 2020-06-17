@@ -120,11 +120,6 @@ overflow-x: hidden;
     left:0;
     right: 0;
     margin-left: auto;
-
-}
-.maincenter{
-    overflow-x:hidden;
-
 }
 .backhead p{
     font-size: 18vw;
@@ -159,7 +154,7 @@ overflow-x: hidden;
   text-align: center;
 }
 .container1{
-    /* margin: 0px; */
+    margin: 0px;
     padding:0 0.5rem;
     overflow-x:hidden;
 
@@ -415,6 +410,7 @@ overflow-x: hidden;
     top:250px;
     right: 0;
     z-index: 0;
+    overflow-x:hidden;
 
 }
 .glasses img{
