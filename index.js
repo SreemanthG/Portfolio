@@ -97,19 +97,19 @@ var glide = new Glide('#project', {
     }
   })
   glide.mount();
-new Glide('#blog', {
-    type: 'carousel',
-    perView: 3,
-    focusAt: 'center',
-    breakpoints: {
-      800: {
-        perView: 2
-      },
-      480: {
-        perView: 1
-      }
-    }
-  }).mount();
+// new Glide('#blog', {
+//     type: 'carousel',
+//     perView: 3,
+//     focusAt: 'center',
+//     breakpoints: {
+//       800: {
+//         perView: 2
+//       },
+//       480: {
+//         perView: 1
+//       }
+//     }
+//   }).mount();
   $(document).ready(function(){
     $(".icon-line2-camera").hover(function(){
     $(this).addClass("rotate-scale-up");
