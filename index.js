@@ -12,6 +12,25 @@ $(document).ready(function() {
   window.onload = hidePreloader;
   // hidePreloader();
   });
+  var currentX = '';
+  var currentY = '';
+  var movementConstant = .015;
+  $(document).mousemove(function(e) {
+    if(currentX == '') currentX = e.pageX;
+    var xdiff = e.pageX - currentX;
+    currentX = e.pageX;
+     if(currentY == '') currentY = e.pageY;
+    var ydiff = e.pageY - currentY;
+    currentY = e.pageY; 
+    $('.parallax div').each(function(i, el) {
+        var movement = (i + 1) * (xdiff * movementConstant);
+      var movementy = (i + 1) * (ydiff * movementConstant);
+        var newX = $(el).position().left + movement;
+      var newY = $(el).position().top + movementy;
+        $(el).css('left', newX + 'px');
+      $(el).css('top', newY + 'px');
+    });
+  });
 // $(document).ready(function() {
 //   var counter = 0;
 
@@ -91,31 +110,6 @@ new Glide('#blog', {
       }
     }
   }).mount();
-var container = document.querySelector(".testcon")
-  emergence.init({
-    container: container,
-    reset: true,
-    handheld: true,
-    throttle: 250,
-    elemCushion: 0.999999,
-    offsetTop: 0,
-    offsetRight: 0,
-    offsetBottom: 0,
-    offsetLeft: 0,
-    callback: function(element, state) {
-      if (state === 'visible') {
-        console.log('Element is visible.');
-      } else if (state === 'reset') {
-        console.log('Element is hidden with reset.');
-      } else if (state === 'noreset') {
-        console.log('Element is hidden with NO reset.');
-      }
-    }
-  });
-
-  // ScrollReveal().reveal('.headline');
-  // ScrollReveal({ reset: true, delay: 2000  });
-  // new WOW().init();
   $(document).ready(function(){
     $(".icon-line2-camera").hover(function(){
     $(this).addClass("rotate-scale-up");
@@ -127,25 +121,33 @@ var container = document.querySelector(".testcon")
     });
     });
 
-    var currentX = '';
-var currentY = '';
-var movementConstant = .015;
-$(document).mousemove(function(e) {
-  if(currentX == '') currentX = e.pageX;
-  var xdiff = e.pageX - currentX;
-  currentX = e.pageX;
-   if(currentY == '') currentY = e.pageY;
-  var ydiff = e.pageY - currentY;
-  currentY = e.pageY; 
-  $('.parallax div').each(function(i, el) {
-      var movement = (i + 1) * (xdiff * movementConstant);
-	  var movementy = (i + 1) * (ydiff * movementConstant);
-      var newX = $(el).position().left + movement;
-	  var newY = $(el).position().top + movementy;
-      $(el).css('left', newX + 'px');
-	  $(el).css('top', newY + 'px');
-  });
-});
+// var container = document.querySelector(".testcon")
+//   emergence.init({
+//     container: container,
+//     reset: true,
+//     handheld: true,
+//     throttle: 250,
+//     elemCushion: 0.999999,
+//     offsetTop: 0,
+//     offsetRight: 0,
+//     offsetBottom: 0,
+//     offsetLeft: 0,
+//     callback: function(element, state) {
+//       if (state === 'visible') {
+//         console.log('Element is visible.');
+//       } else if (state === 'reset') {
+//         console.log('Element is hidden with reset.');
+//       } else if (state === 'noreset') {
+//         console.log('Element is hidden with NO reset.');
+//       }
+//     }
+//   });
+
+  // ScrollReveal().reveal('.headline');
+  // ScrollReveal({ reset: true, delay: 2000  });
+  // new WOW().init();
+
+   
 
   
 if(window.location.hash) {
@@ -160,15 +162,15 @@ if(window.location.hash) {
 
 //gallery
 
-$(function() {
-  var selectedClass = "";
-  $(".filter").click(function(){
-  selectedClass = $(this).attr("data-rel");
-  $("#gallery").fadeTo(100, 0.1);
-  $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
-  setTimeout(function() {
-  $("."+selectedClass).fadeIn().addClass('animation');
-  $("#gallery").fadeTo(300, 1);
-  }, 300);
-  });
-  });
+// $(function() {
+//   var selectedClass = "";
+//   $(".filter").click(function(){
+//   selectedClass = $(this).attr("data-rel");
+//   $("#gallery").fadeTo(100, 0.1);
+//   $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
+//   setTimeout(function() {
+//   $("."+selectedClass).fadeIn().addClass('animation');
+//   $("#gallery").fadeTo(300, 1);
+//   }, 300);
+//   });
+//   });
