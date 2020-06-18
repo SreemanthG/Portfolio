@@ -29,6 +29,7 @@ html::-webkit-scrollbar {
         display: flex;
         justify-content: center;
         margin-top: 0;
+        
     }
     .glasses img{
 
@@ -210,6 +211,7 @@ overflow-x: hidden;
 .readmore{
     border: 3px solid black;
     border-radius: 0;
+    text-decoration: none;
 }
 .readmore:hover{
     background-color: black;
@@ -410,7 +412,7 @@ overflow-x: hidden;
     top:250px;
     right: 0;
     z-index: 0;
-    overflow-x:hidden;
+    overflow:hidden;
 
 }
 .glasses img{
@@ -960,6 +962,18 @@ s
  
  
 }
+#slider-in-laptop .swiper-slide video{
+  position: absolute;
+   top: 0;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+ 
+  z-index:99;
+  height: 100%;
+  
+  
+ }
 /* #slider-in-laptop .rsOverflow,
 #slider-in-laptop .rsSlide,
 #slider-in-laptop .rsVideoFrameHolder,
@@ -1026,11 +1040,19 @@ height: 100%;
  
 }
 .techitem{
-  padding:2rem 3rem;
+  padding:5rem 4rem;
   text-align: center;
   
 }
-
+.developed{
+  padding:10px 10px;
+  text-align: center;
+  /* font-weight: 900; */
+  font-size: 2.5rem;
+  /* -webkit-text-fill-color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1px; */
+}
 .techused{
   margin:7rem 0;
 }
