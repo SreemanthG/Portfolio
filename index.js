@@ -9,7 +9,8 @@ $(document).ready(function() {
     display:"none"
   })
   }
-  hidePreloader();
+  window.onload = hidePreloader;
+  // hidePreloader();
   });
 // $(document).ready(function() {
 //   var counter = 0;
