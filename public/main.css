@@ -658,7 +658,7 @@ s
     /* display: none; */
 }
 
-.body h1 {
+.overlay h1 {
   position: absolute;
   font-family: 'Open Sans';
   font-weight: 600;
@@ -1034,9 +1034,88 @@ height: 100%;
 .techused{
   margin:7rem 0;
 }
-.techused .techheading{
+ .techheading{
   font-weight: 700;
   margin:3rem 0;
   font-size: 2.5rem;
   text-align: center;
 }
+
+
+/* //gallery */
+.gallery {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%; }
+  .gallery .pics {
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease; }
+  .gallery .animation {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
+  
+  @media (max-width: 450px) {
+  .gallery {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-width: 100%;
+  -moz-column-width: 100%;
+  column-width: 100%;
+  }
+  }
+  
+  @media (max-width: 400px) {
+  .btn.filter {
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  }
+  }
+
+  /* Skills */
+  .skillbar {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  
+  .skillbar-bar:before {
+    background: #eee;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .skillbar-bar {
+    height: 3px;
+    width: 0px;
+    background: #323232;
+    -webkit-transition-property: width, background-color;
+    transition-property: width, background-color;
+  }
+  
+  .skillbar-title {
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  
+  .skill-bar-percent {
+    float: right;
+    display: inline-block;
+    color: #323232;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+ 
